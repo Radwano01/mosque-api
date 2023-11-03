@@ -11,7 +11,7 @@ app.listen(_PORT, ()=>{
     console.log("server run at", _PORT)
 })
 
-app.post("/api/:country/:city/:month/:day/:weekday", (req, res) => {
+app.get("/api/:country/:city/:month/:day/:weekday", (req, res) => {
     const { country, city, month, day, weekday } = req.params;
 
     if(Data[country] && Data[country][city]){
