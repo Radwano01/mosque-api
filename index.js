@@ -6,7 +6,7 @@ app.use(cors())
 app.use(bodyparser.json())
 const Data = require("./Data.json")
 
-const _PORT = 5001
+const _PORT = process.env.PORT || 5001;
 app.listen(_PORT, ()=>{
     console.log("server run at", _PORT)
 })
